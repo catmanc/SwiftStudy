@@ -1,0 +1,42 @@
+// Swift Study
+// Different between Class and Struct
+
+// Build class & struct
+
+class Car{
+    var color: String
+    init(color:String){
+        self.color = color
+    }
+}
+
+struct Bike{
+    var color: String
+    init(color: String){
+        self.color = color
+    }
+}
+
+
+
+// class is ref
+
+var myCar = Car(color: "RED")
+print("Color of my car is \(myCar.color)")
+
+var sellCar = myCar
+sellCar.color = "BLUE"
+print("Color of my car is \(myCar.color)")
+print("Color of sell car is \(sellCar.color)")
+
+
+
+// sturck is value
+
+var myBike = Bike(color: "SILVER")
+print("Color of my bike is \(myBike.color)")
+
+var cloneBike = myBike
+cloneBike.color = "BLACK"
+print("Color of my bike is \(myBike.color)")
+print("Color of clone bike is \(cloneBike.color)")
