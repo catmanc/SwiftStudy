@@ -1,0 +1,14 @@
+import AVFoundation
+
+let speachScript = AVSpeechUtterance(string: """
+    What you want to say
+""")
+
+speachScript.rate = 0.4 // speed
+speachScript.pitchMultiplier = 1    // pitch
+speachScript.volume = 1 // volume
+speachScript.voice = AVSpeechSynthesisVoice(language: "zh-TW") // language
+
+let speaker = AVSpeechSynthesizer()
+
+speaker.speak(speachScript) // Say it!
