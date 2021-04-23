@@ -1,0 +1,23 @@
+var myInt: Int = 10
+var myStr: String = "Hellow World"
+var myArr: Array = [1,2,3]
+var myDic: Dictionary = [1:"Chen", 2:"Lin"]
+
+func myFunc(varInt ipInt: Int, varStr ipStr: String, varArr ipArr: Array<Int>, varDic ipDic: Dictionary<Int,String>) {
+
+    var arrString: String = ""
+    for arrElement in ipArr {
+        arrString += "\(arrElement),"
+    }
+    
+    var dicString: String = ""
+    for (dicIDX,dicVal) in ipDic{
+            dicString += "\(dicIDX) is \(dicVal), "
+    }
+    
+    
+    let outPut = "\(ipInt) + \(ipStr) + arr[\(arrString)] + Dictionary<\(dicString)>"
+    print(outPut)
+}
+
+myFunc(varInt: myInt, varStr: myStr, varArr: myArr, varDic: myDic)
